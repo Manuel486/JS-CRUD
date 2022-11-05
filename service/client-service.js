@@ -9,7 +9,7 @@
 // Fetch API
 // si no le ponemos nada por defecto es GET
 const listaClientes = () => 
-    fetch("http://localhost:3000/perfil").then((respuesta) => respuesta.json());
+    fetch("json-server --watch db.json").then((respuesta) => respuesta.json());
 
 // const listaClientes = () => {
 //     // promisse es una funcion asincrona, no vamos a esperar 
@@ -32,7 +32,7 @@ const listaClientes = () =>
 // }
 
 const crearCliente = (nombre,email) => {
-    return fetch("http://localhost:3000/perfil",{
+    return fetch("json-server --watch db.json",{
         method : "POST",
         headers: {
             "Content-type" : "application/json"
